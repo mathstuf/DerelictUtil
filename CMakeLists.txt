@@ -9,3 +9,12 @@ add_library(DerelictUtil STATIC
     source/derelict/util/system.d
     source/derelict/util/wintypes.d
     source/derelict/util/xtypes.d)
+
+install(
+    TARGETS             DerelictUtil
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+    RUNTIME DESTINATION bin)
+install(
+    DIRECTORY   source/
+    DESTINATION include/d)
